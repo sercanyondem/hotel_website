@@ -1,0 +1,476 @@
+@import 'config';
+@import 'utilities';
+@import 'items_grid';
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Dosis', sans-serif;
+  line-height: 1.6;
+  background: $white-color;
+  color: $secondary-color;
+}
+
+a{
+  text-decoration: none;
+  color: $secondary-color;
+}
+
+ul{
+  list-style: none;
+}
+
+h2,h3,h4{
+  text-transform: uppercase;
+}
+
+img{
+   width: 100%;
+ }
+
+// logo
+#logo{
+  width: 100px;
+  height: 100px;
+  color: $white-color;
+  text-transform: uppercase;
+}
+
+// Navbar
+#nav-main{
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1rem;
+  
+  ul{
+    display: flex;
+  }
+
+  li{
+    padding: 1rem 1.5rem;
+  }
+
+  a{
+    text-decoration: none;
+    text-transform: uppercase;
+    border-bottom: 3px transparent solid;
+    padding-bottom: 0.5rem;
+    transition: border-color 0.5s;
+
+    &:hover{
+      border-color: $secondary-color;
+    }
+
+    &.current{
+      border-color: $main-color;
+    }
+  }
+}
+
+#nav-other{
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1rem;
+  
+  ul{
+    display: flex;
+  }
+
+  li{
+    padding: 1rem 1.5rem;
+  }
+
+  a{
+    text-decoration: none;
+    text-transform: uppercase;
+    border-bottom: 3px transparent solid;
+    padding-bottom: 0.5rem;
+    transition: border-color 0.5s;
+
+    &:hover{
+      border-color: $dark-color;
+    }
+
+    &.current{
+      border-color: $secondary-color;
+    }
+  }
+}
+
+// Header
+#header{
+  &-home{
+    background: url('../img/showcase/hotel1.jpg') no-repeat center right/cover;
+    height: 100vh;
+    margin-bottom: 1rem;
+
+    .header-content{
+      text-align: center;
+      padding-top: 25%;
+
+      h1{
+        font-size: 4rem;
+        line-height: 1.2;
+      }
+
+      p{
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  &-inner{
+    // background: url('../img/slider/hotel1.jpg') no-repeat center 30%/cover;
+    // height: 9rem;
+    background: $main-color;
+    border-bottom: 3px solid $secondary-color;
+
+    #nav-other{
+        #logo{
+          width: 70px;
+          height: 70px;
+          margin-top: -1rem;
+        }
+    }
+
+    a{
+      color: $secondary-color;
+    }
+  }
+}
+
+// Home
+#home{
+  &-a{
+    border-bottom: 1px solid $secondary-color;
+    margin-bottom: 2rem;
+
+    .bottom-line{
+      width: 15rem;
+    }
+
+    .icon{
+      display: grid;
+      grid-template-columns: repeat(5,1fr);
+      grid-gap: 1rem;
+    }
+
+    .fas{
+      margin-top: 2rem;
+      color: $main-color;
+      padding-bottom: 0.4rem;
+    }
+  }
+
+  &-b{
+    .bottom-line{
+      width: 10rem;
+      margin-bottom: 3rem;
+    }
+
+    img{
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+    }
+    
+    .testimonials{
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      grid-gap: 2rem;
+      text-align: center;
+      margin-bottom: 2rem;
+
+      .meta{
+        margin-bottom: 1rem;
+        
+        .fas{
+          margin-top: 0.7rem;
+        }
+      }
+
+      &>:nth-child(odd){
+        background: $secondary-color;
+        padding: 20px;
+        color: $main-color;
+      }
+
+      &>:nth-child(even){
+        background: $main-color;
+        padding: 20px;
+        color: $secondary-color;
+      }
+    }
+  }
+}
+
+// About
+#about{
+  &-a{
+    .about-header{
+      background: url('../img/showcase/about.jpg') no-repeat 20% 40%/cover;
+      height: 100%;
+      border-bottom: 5px solid $secondary-color;
+    }
+  }
+
+  &-b{
+    .grid{
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      img{
+        height: 100%;
+        width: 100%;
+        
+        border-bottom: 5px solid $secondary-color;
+      }
+
+      .bottom-line{
+        width: 3rem;
+      }
+
+      .a-text{
+        border-bottom: 5px solid $secondary-color;
+      }
+
+      .btn2{
+        padding-bottom:2rem;
+        text-align: center;
+      }
+      .btn{
+        width: 10rem;
+      }
+    }
+  }
+}
+
+// Services
+#services{
+  &-a{
+    .services-img{
+      background: url('../img/showcase/services.jpg')no-repeat 20% 17%/cover;
+      height: 100%;
+      color: $main-color;
+      border-bottom: 3px solid $secondary-color;
+
+      .bottom-line{
+        width: 9rem;
+      }
+    }
+  }
+
+  &-b{
+    .blog{
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      grid-gap: 1rem;
+
+      img{
+        width: 100%;
+        height: 350px;
+        object-fit: cover;
+        border: 4px solid $secondary-color;
+        border-radius: 50%;
+      }
+
+      .blog-1,
+      .blog-2,
+      .blog-3,
+      .blog-4,
+      .blog-5,
+      .blog-6,
+      .blog-7,
+      .blog-8,
+      .blog-9{
+        text-align: center;
+        .lead{
+          margin-bottom: 0.5rem;
+        }
+      }
+
+      .blog-5{
+        .btn{
+          margin-top: 4.2rem;
+        }
+      }
+      .blog-6{
+        .btn{
+          margin-top: 2rem;
+        }
+      }
+      .blog-7,
+      .blog-8,
+      .blog-9{
+        .btn{
+          margin-top: 1rem;
+        }
+        .lead{
+          margin-bottom: 2rem;
+        }
+      }
+      .blog-9{
+        .lead{
+          margin-bottom: 0 !important;
+        }
+      }
+      .btn{
+        width: 20%;
+      }
+    }
+  }
+}
+
+// Gallery
+#gallery{
+  &-a{
+    background: url('../img/showcase/gallery.jpg') no-repeat center center/cover;
+    color: $secondary-color;
+    .gallery-r{
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      grid-gap: 1rem;
+      .gallery-c{
+        img{
+        width: 100%;
+        height: 100%;
+        border: 2px solid $secondary-color;
+        }
+        &:hover{
+          opacity: 0.5;
+        }
+      }
+    }
+
+    .bottom-line{
+      color: $secondary-color;
+    }
+  }
+}
+
+// Contact
+#contact{
+  &-a{
+    .contact-header{
+      background: url('../img/showcase/contact.jpg')no-repeat 20% 25%/cover;
+      height: 100%;
+    }
+  }
+
+  &-b{
+    .form-group{
+      display: grid;
+      grid-template-areas: 
+      'name email'
+      'subject phone'
+      'message message';
+      grid-gap: 1rem;
+
+      .text-area{ grid-area: name; }
+      .email-area{ grid-area: email; }
+      .subject-area{ grid-area: subject; }
+      .phone-area{ grid-area: phone; }
+      .textarea-area{ grid-area: message; height: 100px; }
+
+      
+      input:focus,
+      textarea:focus{
+        outline: none;
+        border-color: $main-color;
+      }
+    }
+  }
+}
+
+// Footer
+#main-footer{
+  border-top: 3px solid $secondary-color;
+  color: $secondary-color;
+  background: $main-color;
+  .footer{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 2rem;
+
+    .bottom-line{
+      background: $secondary-color;
+      width: 10rem;
+    }
+    &-menu{
+      .fast-menu{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-row-gap: 1.5rem;
+        padding-top: 0.4rem;
+        justify-content: space-between;
+        font-size: 1.2rem;
+        text-align: center;
+
+        a{
+          color: $secondary-color;
+          text-decoration: none;
+          border-bottom: 3px transparent solid;
+          padding-bottom: 0.5rem;
+          transition: border-color 0.5s;
+      
+          &:hover{
+            border-color: $secondary-color;
+          }
+      
+          &.current{
+            border-color: $main-color;
+          }
+        }
+      }
+    }
+    
+    &-nav{
+      div>*{
+        margin: 0.7rem 0 2rem 0;
+      }
+    }
+
+    &-subscribe{
+      .form{
+        input{
+          width: 70%;
+          padding: 0.5rem;
+          margin: 2rem;
+          border: none;
+          border-radius: 20px;
+        }
+      }
+    }
+  }
+
+  .footer-social{
+    p{
+      font-size: 1.4rem;
+    }
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 5rem 0 5rem;
+    height: 5rem;
+    align-items: center;
+    
+    .social .fab {
+      margin-right: 1rem;
+      border: 2px $secondary-color solid;
+      border-radius: 50%;
+      height: 3.2rem;
+      width: 3.2rem;
+      text-align: center;
+      padding: 0.5rem;
+      color: $secondary-color;
+
+      &:hover{
+        background: $main-color;
+      }
+    }
+  }
+}
+
+

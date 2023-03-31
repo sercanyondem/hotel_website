@@ -1,0 +1,112 @@
+.container{
+  max-width: 1280px;
+  padding: 0 1.5rem;
+  margin: auto;
+  overflow: hidden;
+  
+}
+
+.btn{
+  padding: 0.5rem;
+  text-align: center;
+  display: inline-block;
+  background: $secondary-color;
+  color: $dark-color;
+  margin: 0rem 2rem 0rem 2rem;
+  width: 70%;
+  border-radius: 3rem;
+  border: none;
+  cursor: pointer;
+}
+
+.lead{
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+}
+
+.text-center{
+  text-align: center;
+}
+
+.txt-type{
+  color: $main-color;
+}
+
+// Padding
+.py{
+  &-1{ padding: 1rem 0; }
+  &-2{ padding: 2rem 0; }
+  &-3{ padding: 3rem 0; }
+  &-4{ padding: 4rem 0; }
+}
+
+// Margin
+.my{
+  &-1{ margin: 1rem 0; }
+  &-2{ margin: 2rem 0; }
+  &-3{ margin: 3rem 0; }
+  &-4{ margin: 4rem 0; }
+}
+
+.p{
+  &-1{ padding: 2rem 2rem 0;}
+}
+
+// Margin Special
+.m{
+  &-1{ margin: 2rem}
+  &-2{ margin: 2rem 2rem 0 2rem}
+  &-3{ margin: 0 1rem}
+  &-4{ margin: 0 2rem 0 2rem}
+}
+
+.section-title{
+  font-size: 2rem;
+  display: block;
+  padding-bottom: 0.5rem;
+  text-align: center;
+  font-weight: 100;
+  text-transform: uppercase;
+}
+
+.bottom-line{
+  height: 2px;
+  width: 3rem;
+  background: $main-color;
+  display: block;
+  margin: 0 auto 1rem auto;
+}
+
+.bg-light{
+  background: $secondary-color;
+}
+
+.input-pad{
+  padding: 0.5rem 1rem;
+}
+
+.map-responsive{
+
+  overflow:hidden;
+
+  padding-bottom:56.25%;
+
+  position:relative;
+
+  height:0;
+
+}
+
+.map-responsive iframe{
+
+  left:0;
+
+  top:0;
+
+  height:100%;
+
+  width:100%;
+
+  position:absolute;
+
+}
